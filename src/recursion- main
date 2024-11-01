@@ -19,6 +19,9 @@ public class Main {
 		
 		double divisionDouble = divisionDouble(25, 4);
 		System.out.println ("division- Double " + divisionDouble);
+
+		int isPrime = isPrime(29, 2);
+		System.out.println ("is Prime? " + isPrime);
 		
 		boolean Ismultiplier = multiplier (25, 5);
 		System.out.println ("Is x multiple of y? " + Ismultiplier);
@@ -97,8 +100,15 @@ public class Main {
 	}
 	
 	
-	//public static boolean isPrime(int number) {
-	//}
+	public static boolean isPrime(int number, int divisor) {
+		if (number < 2|| number % divisor == 0) {
+			return false;
+		}
+		if ( divisor * divisor > number) {
+			return true;
+		}
+	return isPrime ( number, divisor + 1);
+	}
 	
 	
 	public static boolean zoogiOrEiZoogi(int number) {
